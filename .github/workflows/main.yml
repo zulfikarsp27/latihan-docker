@@ -57,15 +57,15 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          username: zulfikaryamashita
+          password: dckr_pat_-J9nJ1jbP-Bg7VJ4NYNnp6m93cU
 
       # Tag the Docker image
       - name: Tag Docker Image
         run: |
-          docker tag cc ${{ secrets.DOCKER_HUB_USERNAME }}/cc:latest
+          docker tag cc zulfikaryamashita/cc:latest
 
       # Push Docker image to Docker Hub
       - name: Push Docker Image
         run: |
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/cc:latest
+          docker push zulfikaryamashita/cc:latest
